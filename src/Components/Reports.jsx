@@ -7,7 +7,7 @@ function Reports() {
     const [getFile, setGetFile] = useState([])
 
     const handleGetReports = () => {
-        axios.get("http://localhost:5000/allReprts").then((res) => {
+        axios.get("https://gas-system-backend.onrender.com/allReprts").then((res) => {
             setGetFile(res.data)
         }).catch((error) => console.log(error))
     }

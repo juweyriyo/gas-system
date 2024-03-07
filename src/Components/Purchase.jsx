@@ -20,7 +20,7 @@ function Purchase(){
       //register
     const handleRegisterPurchase = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:5000/register/purchases", {
+        axios.post("https://gas-system-backend.onrender.com/register/purchases", {
             "ParchaseID": ParchaseID,
             "tankSize": tankSize,
             "CompanyName": CompanyName,

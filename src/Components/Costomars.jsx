@@ -26,7 +26,7 @@ function Costomars(){
   
       //read
       const handleReadData = () =>{
-          axios.get(`http://localhost:5000/allCustomers?page=${page}`).then((response) =>{
+          axios.get(`https://gas-system-backend.onrender.com/allCustomers?page=${page}`).then((response) =>{
               setCustomer(response.data)
           }).catch((error)=>{
               console.log(error)
@@ -51,7 +51,7 @@ function Costomars(){
       //register
       const handleRegisterCustomers = (e) => {
           e.preventDefault()
-          axios.post("http://localhost:5000/create/customer", {
+          axios.post("https://gas-system-backend.onrender.com/create/customer", {
               "CustomerID": CustomerID,
               "CustomerName": CustomerName,
               "ContactNumber": ContactNumber,
@@ -68,7 +68,7 @@ function Costomars(){
       //update
     const handleUpdate = (e) => {
       e.preventDefault()
-      axios.put(`http://localhost:5000/customer/update/${prams.id}`, {
+      axios.put(`https://gas-system-backend.onrender.com/customer/update/${prams.id}`, {
         "CustomerID": CustomerID,
         "CustomerName": CustomerName,
         "ContactNumber": ContactNumber,
@@ -82,7 +82,7 @@ function Costomars(){
 
     //delete methode
     const handleDelete = (id)=>{
-      axios.delete(`localhost:5000/customer/delete/ ${id}`).then(() =>{
+      axios.delete(`https://gas-system-backend.onrender.com/customer/delete/ ${id}`).then(() =>{
           alert("customer delete succful")
       }).catch((error) =>{
           console.log(error);
@@ -106,7 +106,7 @@ function Costomars(){
 
     //get one data API
     const handleSingleData = () =>{
-      axios.get(`http://localhost:5000/customer/single/${prams.id}`).then((response) =>{
+      axios.get(`https://gas-system-backend.onrender.com/customer/single/${prams.id}`).then((response) =>{
           setCustomerID(response.data[0].CustomerID)
           setCustomerName(response.data[0].CustomerName)
           setContactNumber(response.data[0].ContactNumber)

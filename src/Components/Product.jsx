@@ -36,7 +36,7 @@ function Product(){
     //regester
     const handleRegisterProduct = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:5000/create/product", {
+        axios.post("https://gas-system-backend.onrender.com/create/product", {
             "ProductID": ProductID,
             "tankSize": tankSize,
             "PrisePerUnit": PrisePerUnit,
