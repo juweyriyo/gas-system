@@ -47,16 +47,16 @@ function Logout(){
             <form className=" ml-5">
             <h1 className=" text-3xl font-bold text-red-400 pt-10">Login</h1>
 
-                <label className=" ">User Name</label>
+                <label className="text-gray-800">User Name</label>
                 <br />
                 <input value={Username} onChange={(e) => setUsername(e.target.value)} className=" w-[300px] h-[25px] border-2 border-gray-300 rounded pb-4  " type="text " />
                 <br />
-                <label>Password</label>
+                <label className="text-gray-800">Password</label>
                 <br />
                 <input value={Password} onChange={(e) => setPassword(e.target.value)} className=" w-[300px] h-[25px] border-2 border-gray-300 rounded pb-4" type="text " />
                 < br/>
-                <label>Role : </label>
-                <select value={Role} onChange={(e) => setRole} className=" border-2 border-gray-300 mt-5 mr-5">
+                <label className="text-gray-800">Role : </label>
+                <select value={Role} onChange={(e) => setRole} className=" border-2 border-gray-300 mt-5 mr-5 text-gray-800">
                     <option></option>
                     <option>Admin</option>
                     <option>Employee</option>
